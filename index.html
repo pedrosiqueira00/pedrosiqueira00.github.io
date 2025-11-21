@@ -1,179 +1,54 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Pedro Lionss — Motion Design</title>
-  <meta name="description" content="Motion design de alta conversão para peças publicitárias — Pedro Lionss" />
-  <style>
-    /* Reset simples */
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#0f172a}
-    :root{--bg:#f8fafc;--card:#fff;--muted:#475569;--accent:#ff6b6b}
-    [data-theme='dark']{--bg:#071022;--card:#081226;--muted:#94a3b8;--accent:#ff8b8b;color:#e6eef8}
-    body{background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent),var(--bg);padding:36px}
-    .container{max-width:980px;margin:0 auto}
-
-    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-    .brand{display:flex;gap:16px;align-items:center}
-    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#ffb38f);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
-    h1{font-size:20px}
-    p.lead{color:var(--muted);margin-top:6px}
-
-    nav a{margin-left:12px;text-decoration:none;padding:8px 12px;border-radius:8px;font-weight:600}
-    .btn{background:var(--accent);color:white;text-decoration:none;padding:10px 14px;border-radius:10px;display:inline-block}
-
-    main{display:grid;grid-template-columns:1fr;gap:20px}
-
-    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(11,20,40,0.06)}
-
-    .about{display:flex;gap:20px;align-items:center}
-    .about .text{flex:1}
-    .about .cta{min-width:200px}
-
-    .services{display:flex;gap:12px;flex-wrap:wrap}
-    .service{padding:12px 14px;border-radius:10px;border:1px solid rgba(15,23,42,0.04)}
-
-    .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-    .video{aspect-ratio:16/9;border-radius:10px;overflow:hidden}
-    iframe{width:100%;height:100%;border:0}
-
-    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:14px}
-
-    /* responsividade */
-    @media(min-width:760px){h1{font-size:24px}}
-
-    /* botão de tema */
-    .theme-toggle{background:transparent;border:1px solid rgba(15,23,42,0.06);padding:8px;border-radius:10px;cursor:pointer}
-
-    /* rodapé social */
-    .social{display:flex;gap:10px;align-items:center}
-    .icon{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:10px;background:linear-gradient(180deg,rgba(0,0,0,0.02),transparent)}
-
-    /* contato */
-    .contact-list{display:flex;gap:12px;flex-wrap:wrap}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="light">
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo" aria-hidden>PL</div>
-        <div>
-          <h1>Pedro Lionss</h1>
-          <p class="lead">Motion design de alta conversão para peças publicitárias</p>
+<body>
+  <header class="glass-header">
+    <nav>
+      <div class="logo">Seu Nome</div>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="hero" class="glass hero-section">
+      <h1>Bem-vindo ao meu Portfólio!</h1>
+      <p>Inspirado no design Apple, com efeito glass ✨</p>
+    </section>
+    <section id="sobre" class="glass">
+      <h2>Sobre Mim</h2>
+      <p>
+        Sou um desenvolvedor focado em soluções digitais criativas, apaixonado por design e tecnologia.
+      </p>
+    </section>
+    <section id="projetos" class="glass">
+      <h2>Projetos</h2>
+      <div class="projetos-grid">
+        <div class="projeto-card glass">
+          <h3>Projeto 1</h3>
+          <p>Breve descrição do projeto 1.</p>
         </div>
+        <div class="projeto-card glass">
+          <h3>Projeto 2</h3>
+          <p>Breve descrição do projeto 2.</p>
+        </div>
+        <!-- Adicione mais projetos aqui -->
       </div>
-      <div style="display:flex;gap:12px;align-items:center">
-        <nav>
-          <a href="#portfolio">Portfólio</a>
-          <a href="#contato" class="btn">Contato</a>
-        </nav>
-        <button class="theme-toggle" id="themeToggle" title="Alternar tema">🌙</button>
-      </div>
-    </header>
-
-    <main>
-      <section class="card about">
-        <div class="text">
-          <h2>Olá — sou Pedro</h2>
-          <p style="margin-top:8px;color:var(--muted)">Eu crio motion design focado em performance: peças para anúncios, redes sociais e campanhas que convertem. Trabalho com edição, animação e direção de arte para marcas que querem resultado.</p>
-
-          <div style="margin-top:12px" class="services">
-            <div class="service">Vídeos para anúncios</div>
-            <div class="service">Capa animada / teasers</div>
-            <div class="service">Conteúdo para Instagram</div>
-            <div class="service">Edição e finalização</div>
-          </div>
-
-          <div style="margin-top:16px">
-            <!-- Substitua # pelos seus links reais -->
-            <a class="btn" href="#" id="whatsappBtn">Abrir WhatsApp</a>
-            <a style="margin-left:10px;text-decoration:none;font-weight:700" href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank">Instagram</a>
-            <a style="margin-left:10px;text-decoration:none;font-weight:700" href="https://www.youtube.com/YOUR_CHANNEL" target="_blank">YouTube</a>
-          </div>
-        </div>
-        <div class="cta">
-          <div class="card" style="text-align:center;padding:20px;border-radius:12px">
-            <p style="font-weight:700">Serviço em destaque</p>
-            <p style="color:var(--muted);margin-top:8px">Motion para campanhas de conversão — entrega rápida e otimizada para ads.</p>
-            <a class="btn" href="#contato" style="display:inline-block;margin-top:12px">Quero trabalhar</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio" class="card">
-        <h3>Portfólio</h3>
-        <p style="color:var(--muted);margin-top:8px">Vídeos recentes — clique para abrir no YouTube</p>
-        <div style="margin-top:12px" class="portfolio-grid">
-          <!-- Substitua os IDs do YouTube abaixo pelos seus vídeos reais -->
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Vídeo 1" allowfullscreen></iframe>
-          </div>
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Vídeo 2" allowfullscreen></iframe>
-          </div>
-          <div class="video">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Vídeo 3" allowfullscreen></iframe>
-          </div>
-        </div>
-      </section>
-
-      <section id="contato" class="card">
-        <h3>Contato</h3>
-        <p style="color:var(--muted);margin-top:8px">Quer contratar ou pedir orçamento? Me mande uma mensagem.</p>
-        <div style="margin-top:12px" class="contact-list">
-          <!-- Troque os links abaixo -->
-          <a class="icon" href="https://www.instagram.com/YOUR_INSTAGRAM" target="_blank" aria-label="Instagram">IG</a>
-          <a class="icon" href="https://www.youtube.com/YOUR_CHANNEL" target="_blank" aria-label="YouTube">YT</a>
-          <a class="icon" href="mailto:seu@email.com" aria-label="Email">✉</a>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <p>© <span id="year"></span> Pedro Lionss — Motion Designer</p>
-    </footer>
-  </div>
-
-  <script>
-    // data and theme
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const themeToggle = document.getElementById('themeToggle');
-    themeToggle.addEventListener('click', ()=>{
-      const root = document.documentElement;
-      const body = document.body;
-      const current = body.getAttribute('data-theme') || 'light';
-      const next = current === 'light' ? 'dark' : 'light';
-      body.setAttribute('data-theme', next);
-      themeToggle.textContent = next === 'dark' ? '☀️' : '🌙';
-    });
-
-    // botão WhatsApp (abre conversa) - substitua o número
-    const whatsappBtn = document.getElementById('whatsappBtn');
-    whatsappBtn.addEventListener('click', (e)=>{
-      e.preventDefault();
-      // coloque seu telefone no formato internacional sem sinais, ex: 5511999999999
-      const phone = 'YOUR_WHATSAPP_NUMBER';
-      if(!phone || phone === 'YOUR_WHATSAPP_NUMBER'){
-        alert('Antes de usar este botão, edite index.html e coloque seu número de WhatsApp na variável phone.');
-        return;
-      }
-      const msg = encodeURIComponent('Olá! Vi seu portfólio e quero orçar um trabalho.');
-      window.open('https://wa.me/' + phone + '?text=' + msg, '_blank');
-    });
-  </script>
-
-  <!--
-    INSTRUÇÕES RÁPIDAS:
-    1) Substitua YOUR_INSTAGRAM por "seuusuario" e YOUR_CHANNEL/VIDEO_ID_X pelos seus vídeos do YouTube.
-    2) Substitua YOUR_WHATSAPP_NUMBER pelo número no formato internacional (ex: 5511999999999).
-    3) Salve este arquivo como index.html e suba no repositório <seu-usuario>.github.io (ou crie com esse nome).
-    4) Ative GitHub Pages em Settings → Pages → Branch: main, root.
-    5) Para usar seu domínio próprio, adicione o domínio em Custom domain e crie os registros DNS que o GitHub instruir.
-
-    Se quiser, eu já edito os links e os IDs dos vídeos pra você — me mande os URLs do Instagram e YouTube + seu número de WhatsApp (opcional).
-  -->
+    </section>
+    <section id="contato" class="glass">
+      <h2>Contato</h2>
+      <p>Email: seuemail@exemplo.com</p>
+    </section>
+  </main>
+  <footer class="glass-footer">
+    © 2025 Seu Nome. Todos os direitos reservados.
+  </footer>
 </body>
 </html>
